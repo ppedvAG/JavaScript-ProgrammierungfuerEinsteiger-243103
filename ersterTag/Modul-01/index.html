@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<!--
+        <tagname> Inhalt  </Tagname>
+        Starttag  Content  Endtag
+        Tagnamen sind nicht case-sensitive
+        Tags sind verschachtelbar
+        Konvention ist es aber die Tagnamen klein zu schreiben
+    -->
+
+<html>
+
+<head>
+    <!--
+        Der head enthält Metainformationen über unsere Seite, wie z.B. den Titel, Stylesheets und Skripte
+    -->
+
+    <!-- Was im Tab als name angezeigt wird oder bei der Google Suche -->
+    <title>
+        Meine erste HTML Seite
+    </title>
+
+    <!-- Weist den browser welche encodierung verwendet werden soll -->
+    <meta charset="utf-8">
+
+    <meta name="description" content="Ich bin der Text, der in der Google/Bing Suche unter dem Title der Seite steht">
+
+    <!-- Dieser meta-Tag stellt die Breite des Dokuments auf die Breite des genutzten Gerätes/Browsers
+     ein und definiert den anfänglichen Zoom-Faktor -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <!--
+        Der body enthält den tatsächlichen sichtbaren Inhalt unserer Seite
+        Darf nur einmal pro HTML Dokument vorkommen
+    -->
+
+    <div>
+        <!-- Steht für division, also eine Unterteilung -->
+        <!-- Benutzt man um die Seite in einzelne Bereiche aufzugliedern, z.B. in eine Navigationsleiste 
+         und den tatsächlichen Inhalt -->
+
+        <ul>
+            <!-- Steht für ungeordnete Liste und wir standardmäßig als Liste mit Aufzählungspunkten dargestellt -->
+            <!-- Enhält immer nur li-Elemente oder weitere ul-Elemente -->
+            <li>
+                <!-- Steht für list-item und ist ein Aufzählungspunkt -->
+                <!-- Im Falle einer Navigationsleiste enthält das list item anchor-Tags -->
+                <a href="#">Home</a>
+                <!-- Ein a-Tag verlinkt immer auf eine andere Seite, kann sowohl auf unserer eigenen 
+                 Webseite sein oder auf eine andere Domain -->
+            </li>
+            <li>
+                <a href="https://de.wikipedia.org/wiki/Wikipedia:Hauptseite">externe Seite</a>
+                <!-- Bei externen Seiten muss mit absolutem Pfad gearbeitet werden -->
+            </li>
+            <li>
+                <a href="/ersterTag/Modul-02/aboutme.html">interne Seite</a>
+                <!-- Bei internen Seiten reicht der relative Pfad -->
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h1>Ich bin die Hauptüberschrift der Seite</h1>
+        <!--
+            Die h*-Tags gibt es von h1 bis h6
+            Sie werden immer fett geschrieben und je nach Zahl unterschiedlich groß geschrieben
+            h1 sollte nur ein einziges mal pro HTML-Dokument verwendet werden
+        -->
+        <h6>Ich bin eine der unwichtigsten Überschriften</h6>
+
+        <h2>Texte in HTML</h2>
+
+        <p style="background-color: aquamarine;">Ich bin ein Paragraph</p>
+        <span style="background-color: cadetblue;">Ich bin eine zeichenfolge</span>
+        <span> bla bla bla </span>
+
+        <pre>Beim pre Tag, was für preformatted Text steht, wird die Formatierung     Bei           behalten
+
+            wie
+                    man
+                sehen 
+                                                    Kann.
+        </pre>
+
+        <h3 title="Tooltip">Kleines Gimmick:</h3>
+        <p title="Ich bin ein Tooltip">Man kann bei allen Elementen Tooltips mit dem title-Attribut
+            darstellen, also hover über mich.
+        </p>
+    </div>
+    <div>
+        <h2>Listen in HTML</h2>
+
+        <h3>Die ungeordnete Liste</h3>
+        <p>Die ungeordnete Liste dient der Aufzählung von Stichpunkten, Vorbedingungen wobei alles ohne
+            Gewichtung passiert
+        </p>
+        <p>Das ul-Element darf entweder li-Elemente oder andere ul-Elemente in sich verschachtelt haben</p>
+
+        <ul>
+            <li>ABC</li>
+            <li>DEF</li>
+            <li>XYZ
+                <ul>
+                    <li>Unterpunkt</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Die geordnete Liste</h3>
+        <p>Dient ebenfalls der Auflistung, diesmal allerdings von Einzelschritten oder von Rankings</p>
+        <p>Das ol-Element darf entweder li-elemente oder andere ol-Elemente in sich enthalten</p>
+
+        <ol>
+            <li>Mehl</li>
+            <li>Eier</li>
+            <li>Milch</li>
+            <li>Getränkte
+                <ol>
+                    <li>Cola
+                        <ol>
+                            <li>Normal</li>
+                            <li>Light</li>
+                            <li>Zero</li>
+                        </ol>
+                    </li>
+                    <li>Wasser
+                        <ol>
+                            <li>Spritzig</li>
+                            <li>Still</li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+
+        <h4>Attribute des ol-Elements</h4>
+        <ol>
+            <li>type</li>
+            <li>start</li>
+            <li>reversed</li>
+        </ol>
+
+        <p>Wir können diese Attribute beliebig mischen</p>
+        <p>Type: </p>
+        <ul>
+            <li>A - Zählt mit Großbuchstaben durch</li>
+            <li>a - Zählt mit Kleinbuchstaben durch</li>
+            <li>I - Zählt mit großgeschriebenen römischen Zahlen durch</li>
+            <li>i - Zählt mit kleingeschriebenen römischen Zahlen durch</li>
+            <li>1 - Zählt mit arabischen Ziffern durch (ist Standard)</li>
+        </ul>
+        <ol type="a">
+            <li>A</li>
+            <li>B</li>
+        </ol>
+
+        <p>Start: </p>
+        <p>Sagt wo das Zählen beginnen soll</p>
+        <ol type="1" start="54">
+            <li>A</li>
+            <li>B</li>
+        </ol>
+
+        <p>Reversed: </p>
+        <p>Ist ein boolesches Attribut, also ein Attribut das nur Wahr oder Falsch sein kann</p>
+        <ol type="1" start="0" reversed>
+            <li>A</li>
+            <li>B</li>
+        </ol>
+
+        <h3>Description List: </h3>
+        <p>Die dl dient nicht der Aufzählung, sondern dient der Definition von Begriffen</p>
+        <p>Die dl enthält dt - description term - und dd - description detail - Elemente</p>
+        <p>Dabei ist der dt-Tag der Begriff, der beschrieben wird und dd ist die Beschreibung selbst</p>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Die meistverbreitete Markuplanguage im Netz</dd>
+
+            <dt>JavaScript</dt>
+            <dd>Die meistbenutzte Programmiersprache im Web</dd>
+        </dl>
+    </div>
+    <div>
+        <h2> Tabellen in HTML</h2>
+        <p>sind in mehrere Teile aufgespalten</p>
+        <p>Verwendete Tags:</p>
+        <ul>
+            <li>table</li>
+            <li>thead</li>
+            <li>tbody</li>
+            <li>tfoot</li>
+            <li>tr</li>
+            <li>th</li>
+            <li>td</li>
+        </ul>
+
+        <h3>Beispiel-Tabellen</h3>
+        <table>
+            <!--Definiert den Anfang und das Ende einer Tabelle-->
+            <thead>
+                <!-- Enthält Informationen über die Tabelle, wie z.B. die Legnde -->
+                <tr>
+                    <!-- Erzeugt eine neue Zeile-->
+                    <th scope="col">Produkt</th>
+                    <th scope="col">Anzahl</th>
+                    <th scope="col">Stückpreis</th>
+                    <th scope="col">Gesamtpreis</th>
+                    <!-- scope-Attribut
+                        definiert ob die Überschrift für eine Palte oder eine Zeile gilt 
+                    -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Enhält die tatsächlichen Daten der Tabelle -->
+                <tr>
+                    <th scope="row">Laptop</th>
+                    <td>5</td>
+                    <td>1.500€</td>
+                    <td>7.500€</td>
+                </tr>
+                <tr>
+                    <th scope="row">Monitor</th>
+                    <td>5</td>
+                    <td>200€</td>
+                    <td>1.000€</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="3">Preis insgesamt:</th>
+                    <td>8.500€</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div>
+        <h2>Links in HTML</h2>
+        <p>Um Links darzustellen benutzen wir den a-Tag</p>
+        <p>Der anchor-Tag muss über das href="" Attribut verfügen</p>
+        <p>Ein häufig benutztes Attribut für den a-tag ist das target-Attribut</p>
+        <a href="https://ppedv.de" target="_blank">PPEDV</a>
+        <p>Meistens verwenden wir das target-Attribut wenn wir auf externe Seiten verweisen, damit
+            der Benuzter weiterhin auf unserer Seite bleibt
+        </p>
+    </div>
+    <div>
+        <h2>Bilder in HTML</h2>
+        <p>Wir haben zwei Möglichkeiten Bilder in HTML darzustellen</p>
+        <p>Die klassische Variante ist die Verwendung des img-Tags</p>
+        <img src="https://via.placeholder.com/250x250" alt="Platzhalterbild">
+        <p>Der img-Tag sollte über die Attribute href(Pfad/Link zum Bild) sowie alt(kurze Beschreibung
+            des Bildes) verfügen
+        </p>
+
+        <p>Moderne Alternative zum img-Tag ist der picture-Tag</p>
+        <picture>
+            <source media="(max-width: 750px)" srcset="https://via.placeholder.com/850x850">
+            <source media="(min-width: 450px)" srcset="https://via.placeholder.com/450x450">
+            <img src="https://via.placeholder.com/250x250" alt="Platzhalterbild">
+        </picture>
+        <p>Der picture-Tag selber hat keine Attribute, beinhaltet aber mindestens ein source-Tag und
+            ein img-Tag, der immer als letztes geschrieben wird
+        </p>
+        <p>Wir gehen dabei vom größten zum kleinsten Bild</p>
+        <p>Der Browser prüft von oben nach unten durch ob das benutzte Gerät die Bedingungen erfüllt und
+            stellt das entsprechende Element dar. Wenn keine der Bedingungen (Inhalt von media) erfüllt wird
+            nimmt er den img-Tag. Falls der Browser den picture-Tag nicht unterstützt wird ebenfalls der
+            img-Tag verwendet. Falls eines der Bilder in den Source-Tags nicht geladen werden kann, wird
+            der alt-Text vom img-Tag dargestellt
+        </p>
+    </div>
+    <div>
+        <h2>Videos in HTML</h2>
+        <p>Der video-Tag funktioniert recht ähnlich wie der picture-Tag, d.h. auch hier umschließt
+            der video-Tag eins oder mehrere source-Tags
+        </p>
+        <p>Diesmal definieren die source-Tags aber die Dateiendung des Videos und der Browser nimmt sich
+            das erste kompatible Format
+        </p>
+
+        <video muted controls poster="https://via.placeholder.com/320x180">
+            <source src="https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+                type="video/mp4">
+            <source src="https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg"
+                type="video/ogg">
+        </video>
+
+        <h3>Attribute des Video-Tags</h3>
+        <ul>
+            <li>autoplay - startet das Video automatisch sobald man die Seite betritt</li>
+            <li>controls - stellt eine Benutzeroberfläche für das Video zur Verfügung</li>
+            <li>muted - das Video wird standardmäßig stumm abgespielt</li>
+            <li>loop - lässt das Video nach durchlauf</li>
+        </ul>
+        <a href="https://en.wikipedia.org/wiki/HTML5_video#Browser_support">Unterstützte Formate nach Browser</a>
+    </div>
+</body>
+
+</html>
