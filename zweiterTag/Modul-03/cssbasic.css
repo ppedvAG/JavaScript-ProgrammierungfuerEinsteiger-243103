@@ -1,0 +1,45 @@
+/*
+Ich bin ein Kommentar
+*/
+
+/* Selektoren in CSS
+
+Element Selektor
+*/
+p {
+    color: rgb(204, 10, 10);
+}
+
+/*
+    ID-Selektor
+    Stylt jedes Element mit der entsprechenden ID, also im Optimalfall nur ein einziges
+    Ist der spezifischste Selektor
+*/
+#site-top {
+    font-size: 42px;
+    color: aquamarine;
+}
+
+/*
+    Klasse-Selektor
+    Stylt alle Elemente mit der entsprechenden Klasse
+    Ist der zweitspezifischte Selektor, nach dem ID-Selektor
+*/
+.cool-paragraph {
+    color: slateblue;
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 45px;
+    color: #000;
+}
+
+/*
+    Universal-Selektor
+    Stylt alle Elemente
+    Spezifität: 0, stylt also nur Elemente, für die das Property noch nicht festgelegt wurde
+*/
+* {
+    color: yellow;
+}
