@@ -1,0 +1,108 @@
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(180deg, #020024, #6f48ce);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header-div {
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(111, 72, 206, 1) 46%, rgba(0, 212, 255, 1) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 190px;
+}
+
+.monsieur-la-doulaise-regular {
+    font-family: "Monsieur La Doulaise", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: antiquewhite;
+    font-size: 100px;
+}
+
+.company-logo {
+    max-width: 300px;
+    float: right;
+}
+
+.logo-pic {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.nav-div {
+    background: linear-gradient(180deg, #020024 0%, #6f48ce 100%);
+    width: 100%;
+}
+
+.nav-div ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-div li {
+    font-size: 50px;
+    background-color: blueviolet;
+    padding: 10px 20px;
+}
+
+.nav-div li:hover {
+    background-color: orange;
+}
+
+.content-div {
+    display: flex;
+    flex-direction: row;
+    min-height: calc(100vh - 230px);
+    padding-bottom: 60px;
+}
+
+.activity-div {
+    font-size: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aqua;
+}
+
+.activity-img {
+    max-width: 400px;
+    margin-bottom: 20px;
+    border: 10px solid wheat;
+    border-radius: 0px 30px 30px 0px;
+}
+
+.text-div {
+    grid-area: text;
+    padding: 50px;
+    background-color: blue;
+    font-size: 25px;
+    flex: 1;
+    color: white;
+}
+
+.footer-div {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: linear-gradient(180deg, blue, #6f48ce);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
