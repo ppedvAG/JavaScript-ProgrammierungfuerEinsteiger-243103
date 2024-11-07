@@ -168,6 +168,7 @@ console.log(block2); // Das funktioniert, da var den Blockscope nicht kennt
           und gib es aus.
         - Nutze den Modulo-Operator, um zu überprüfen, ob dein Alter eine gerade oder ungerade Zahl ist
           und gib eine Nachricht aus z.B. "Mein Alter ist eine gerade Zahl"
+        
 
     3. Datentypen und typeof
         - Gib den Datentypen von vorname,alter, land und geburtsjahr mit typeof in der Konsole aus.
