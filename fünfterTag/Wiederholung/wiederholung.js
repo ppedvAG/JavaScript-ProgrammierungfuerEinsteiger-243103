@@ -34,4 +34,6 @@ muss zwischen 1 und 10 liegen!“ angezeigt werden.
 Wenn die Checkbox „Ich bestätige meine Bestellung“ nicht aktiviert ist, zeige eine Meldung 
 an, dass die Bestellung nur abgeschickt werden kann, wenn sie bestätigt wurde.
 
+name.addEventListener("blur", validateName);
+
 */
