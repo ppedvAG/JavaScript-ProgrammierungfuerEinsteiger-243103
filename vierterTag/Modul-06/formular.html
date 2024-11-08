@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulare</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        .form-container {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="radio"],
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>Registrierung</h2>
+        <form action="https://ppedv.de" method="post">
+            <!--Name-->
+            <div class="form-group">
+                <label for="name">Vollständiger Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <!--E-Mail-->
+            <div class="form-group">
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!--Passwort-->
+            <div class="form-group">
+                <label for="password">Passwort:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <!--Geschlecht-->
+            <div class="form-group">
+                <label>Geschlecht:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Männlich</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Weiblich</label>
+            </div>
+
+            <!--Land-->
+            <div class="form-group">
+                <label for="country">Land:</label>
+                <select name="country" id="country" required>
+                    <option value="">Wähle ein Land</option>
+                    <option value="de">Deutschland</option>
+                    <option value="at">Österreich</option>
+                    <option value="ch">Schweiz</option>
+                </select>
+            </div>
+
+            <!--Nachricht-->
+            <div class="form-group">
+                <label for="message">Nachricht:</label>
+                <textarea name="message" id="message" rows="4" maxlength="10"
+                    placeholder="Deine Nachricht...."></textarea>
+            </div>
+
+            <!--Senden Button-->
+            <div class="form-group">
+                <button type="submit">Registrieren</button>
+            </div>
+        </form>
+
+    </div>
+
+    <!--
+    1. Vollständiger Name (pflicht)    
+    2. Email (pflicht)
+    3. Passwort (pflicht, mind 8 zeichen)
+    4. Bestätigung des Passwort (pflicht, identisch)
+    5. Alter (optional, zahleneingabe zwischen 18 und 100)
+    6. Telefonnummer (optional, aber nur nummern und bestimmte Formatierungen zulässig)
+    7. Kommentare (optional, bis zu 200 zeichen limitiert sein)
+    8. Passe es per CSS schöner an
+-->
+
+</body>
+
+</html>
